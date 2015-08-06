@@ -33,7 +33,7 @@ namespace BeaconDemo
 				Text = "Direction",
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				VerticalOptions = LayoutOptions.CenterAndExpand,
-				Font = Font.SystemFontOfSize(14)
+				FontSize = 14
 			};
 
 

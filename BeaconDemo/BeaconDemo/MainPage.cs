@@ -15,13 +15,10 @@ namespace BeaconDemo
 		StackLayout tableLayout;
 		StackLayout searchingLayout;
 		ObservableCollection<BeaconItem> beaconCollection;
-		TrackingPage trackingPage;
 
 		public MainPage ()
 		{
 			Title = "Available Beacons";
-
-			trackingPage = new TrackingPage ();
 
 			listView = new ListView {
 				RowHeight = 100,
@@ -38,7 +35,7 @@ namespace BeaconDemo
 			};
 
 			trackingButton.Clicked += (sender, args) => {
-				Navigation.PushAsync(trackingPage);
+				Navigation.PushAsync(new TrackingPage ());
 			};
 
 			tableLayout = new StackLayout {
