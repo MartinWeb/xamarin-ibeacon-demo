@@ -3,12 +3,11 @@ using Xamarin.Forms;
 
 namespace BeaconDemo
 {
-	public class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
-		{	
-			var mainNav = new NavigationPage (new MainPage ());
-			return mainNav;
+		public App ()
+		{
+			MainPage = new NavigationPage(new MainPage());
 		}
 	}
 

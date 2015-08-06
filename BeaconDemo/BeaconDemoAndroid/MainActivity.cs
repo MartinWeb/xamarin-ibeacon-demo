@@ -13,19 +13,15 @@ using Xamarin.Forms.Platform.Android;
 namespace BeaconDemoAndroid
 {
 	[Activity (Label = "BeaconDemoAndroid", MainLauncher = true)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity : FormsApplicationActivity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			Forms.Init (this, bundle);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App());
 		}
 	}
 }
-
-

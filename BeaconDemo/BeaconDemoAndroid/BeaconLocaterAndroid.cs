@@ -65,15 +65,14 @@ namespace BeaconDemoAndroid
 
 		void RangingBeaconsInRegion(object sender, RangeEventArgs e)
 		{
-			if (e.Beacons.Count > 0)
-			{
+			if (e.Beacons.Count > 0) {
 				foreach (var b in e.Beacons) {
 					if ((ProximityType)b.Proximity != ProximityType.Unknown) {
 
 						var exists = false;
-						for (int i=0; i<beacons.Count; i++) {
-							if (beacons[i].Minor.Equals(b.Minor.ToString())) {
-								beacons[i].CurrentDistance = Math.Round (b.Accuracy, 2);
+						for (int i = 0; i < beacons.Count; i++) {
+							if (beacons [i].Minor.Equals (b.Minor.ToString ())) {
+								beacons [i].CurrentDistance = Math.Round (b.Accuracy, 2);
 								SetProximity (b, beacons [i]);
 								exists = true;
 							}
@@ -90,6 +89,10 @@ namespace BeaconDemoAndroid
 						}
 					}
 				}
+			} else {
+				System.Diagnostics.Debug.WriteLine ("!!!!!!!!!!!!!!!!!!!");
+				System.Diagnostics.Debug.WriteLine ("NO BEACON IN REGION");
+				System.Diagnostics.Debug.WriteLine ("!!!!!!!!!!!!!!!!!!!");
 			}
 		}
 
