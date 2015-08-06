@@ -37,7 +37,7 @@ namespace BeaconDemoAndroid
 //				new BeaconItem { Name = "Android3", Minor = "1235", CurrentDistance = 12.5 },
 //			};
 
-			context = Application.Context;
+			context = Android.App.Application.Context;
 
 			_iBeaconManager = IBeaconManager.GetInstanceForApplication (context);
 			_monitorNotifier = new MonitorNotifier ();
